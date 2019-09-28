@@ -1,11 +1,13 @@
 import React from 'react'
-import {NavLink} from "react-router-dom"
+import {NavLink, Link, withRouter} from "react-router-dom"
 
-function Navbar() {
+function Navbar(props) {
+  console.log(props)
+  
   return (
     <nav className="nav-wrapper red darken-3">
       <div className="container">
-        <a className="brand-logo">Poke' Times</a>
+        <a href="/" className="brand-logo">Poke' Times</a>
         <ul className="right">
           <li><NavLink to="/">Home</NavLink></li>
           <li><NavLink to="/about">About</NavLink></li>
@@ -16,4 +18,5 @@ function Navbar() {
   )
 }
  
-export default Navbar
+// withRouter 会把props 传递给Navbar， super charge
+export default withRouter(Navbar)
