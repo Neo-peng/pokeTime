@@ -1,9 +1,7 @@
 import React from 'react'
 import {NavLink, Link, withRouter} from "react-router-dom"
 
-function Navbar(props) {
-  console.log(props)
-  
+function Navbar(props) {  
   return (
     <nav className="nav-wrapper red darken-3">
       <div className="container">
@@ -18,5 +16,5 @@ function Navbar(props) {
   )
 }
  
-// withRouter 会把props 传递给Navbar， super charge
+// withRouter 是一个 "higher order component", 会把props 传递给Navbar， super charge
 export default withRouter(Navbar)
